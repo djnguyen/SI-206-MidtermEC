@@ -43,7 +43,11 @@ print(func([1,2]))
 
 ## Put your comment explanations/reflections here:
 
-## After looking at this problem again, I realized that x is equal to the list [1,2] 
+## After looking at this problem again, I realized that x is equal to the list [1,2] and since that list is being
+## passed through the function, it would return that same list again. During the exam, I was thinking becuase there 
+## is a return statement, the for loop would exit and only the first element of the list will be printed, instead of both.
+
+## LOOK AT THIS AGAIN???
 
 
 print("\n*******\n")
@@ -59,9 +63,14 @@ print("\n*******\n")
 
 ## Put your answer to the question here:
 
-
+## C and D
 
 ## Put your comment explanations/reflections here:
+
+## The answer for this problem was only supposed to be D. I had the right idea going because for answer choice B, I wrote
+## down that x = Card(2.3) would create the instance but would fail. I had forgotten to realize that there is no suit in
+## the suit_name list with the list element of 5. That would also cause nothing to be saved into the variable x becuase
+## it would fail to properly create an instance.
 
 
 
@@ -137,54 +146,56 @@ print("\n*******\n")
 
 print("\n*******\n")
 
-## (Midterm 18). Given the following code, you want to sort the list saved in lst1 to end up in the following order: ["happy","absence","something","synergy"]. Which of the 3 following named functiosn should be the KEY PARAMETER of the sorted function (replacing the question marks in the commented line below)?
+# Obtained Full Points for Midterm Question 18
+# ## (Midterm 18). Given the following code, you want to sort the list saved in lst1 to end up in the following order: ["happy","absence","something","synergy"]. Which of the 3 following named functiosn should be the KEY PARAMETER of the sorted function (replacing the question marks in the commented line below)?
 
-lst1 = ["happy","absence","synergy","something"]
+# lst1 = ["happy","absence","synergy","something"]
 
-# (a)
-def second_elem(x):
-    return x[1]
+# # (a)
+# def second_elem(x):
+#     return x[1]
 
-# (b)
-def sec_elements(lst):
-    for x in lst:
-        return x
+# # (b)
+# def sec_elements(lst):
+#     for x in lst:
+#         return x
 
-# (c)
-def sort_by(lst):
-    return len(lst)
+# # (c)
+# def sort_by(lst):
+#     return len(lst)
 
-# this is the sorted line that needs one of those names as addition...
-# sorted_lst1 = sorted(lst1, key = ???)
-
-
-## Put your answer to the question here:
-
-## Put your reflections/explanations here:
-
-print("\n*******\n")
-
-## (Midterm 21). Given the following code:
-
-import requests
-import json
-baseurl = "http://itunes.apple.com/search"
-params = {}
-params["term"] = "Franz Ferdinand"
-params["entity"] = "musicVideo"
-r = requests.get(baseurl, params=params)
-
-## What is the type of the variable r?
-
-# a. A File object
-# b. A BeautifulSoup object
-# c. A Response object
-# d. A string
-# e. A dictionary
-
-## Put your answer to the question here:
+# # this is the sorted line that needs one of those names as addition...
+# # sorted_lst1 = sorted(lst1, key = ???)
 
 
-## Put your reflections/explanations here:
+# ## Put your answer to the question here:
+
+# ## Put your reflections/explanations here:
+
+# print("\n*******\n")
+
+# Obtained Full Points for Midterm Question 20
+# ## (Midterm 20). Given the following code:
+
+# import requests
+# import json
+# baseurl = "http://itunes.apple.com/search"
+# params = {}
+# params["term"] = "Franz Ferdinand"
+# params["entity"] = "musicVideo"
+# r = requests.get(baseurl, params=params)
+
+# ## What is the type of the variable r?
+
+# # a. A File object
+# # b. A BeautifulSoup object
+# # c. A Response object
+# # d. A string
+# # e. A dictionary
+
+# ## Put your answer to the question here:
+
+
+# ## Put your reflections/explanations here:
 
 
