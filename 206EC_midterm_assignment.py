@@ -1,5 +1,7 @@
 ## Winter 2017
 ## SI 206 - Programming I
+## Name: David Nguyen (djnguyen)
+## Section: Thursday (3-4 PM)
 
 ## Extra Credit Assignment
 
@@ -54,6 +56,7 @@ print(func([1,2]))
 
 print("\n*******\n")
 print ('Midterm Question #6')
+print ('Check out my Comments!')
 
 ## (Midterm 6) Which of the following statements (in comments) are valid to create an instance of class Card and save it to the variable x, with no errors? (Reference cards.py / the code on the exam)
 
@@ -85,43 +88,55 @@ print ('Midterm Question #7')
 ## This method should return a boolean value True if the input rank number is larger than the Card's rank, and False if it is smaller or equal to the Card's rank.
 
 class Card(object):
-	suit_names =  ["Diamonds","Clubs","Hearts","Spades"]
-	rank_levels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
-	faces = {1:"Ace",11:"Jack",12:"Queen",13:"King"}
+    suit_names =  ["Diamonds","Clubs","Hearts","Spades"]
+    rank_levels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+    faces = {1:"Ace",11:"Jack",12:"Queen",13:"King"}
 
-	def __init__(self, suit=0,rank=2):
-		self.suit = self.suit_names[suit]
-		if rank in self.faces: # self.rank handles printed representation
-			self.rank = self.faces[rank]
-		else:
-			self.rank = rank
-		self.rank_num = rank # To handle winning comparison 
+    def __init__(self, suit=0,rank=2):
+        self.suit = self.suit_names[suit]
+        if rank in self.faces: # self.rank handles printed representation
+            self.rank = self.faces[rank]
+        else:
+            self.rank = rank
+        self.rank_num = rank # To handle winning comparison 
 
-	def __str__(self):
-		return "{} of {}".format(self.rank,self.suit)
+    def __str__(self):
+        return "{} of {}".format(self.rank,self.suit)
 
-	def compare_rank(self, rank_imp):
-		if self.rank > rank_imp:
-			return False
-
-		else:
-			return True
-
+    def compare_rank(self, rank_imp):
+        
+        if self.rank_num < rank_imp:
+            return True
+        
+        else:
+            return False
 
 ## For example, the following code should work correctly when placed inside the Card class definition, if the compare_rank method is defined correctly:
 
 c = Card(2,11)
+
 print(c.compare_rank(4)) # should print False
 print(c.compare_rank(13)) # should print True
-print (c.compare_rank(11)) # should print False
+print(c.compare_rank(11)) # should print False
 
 ## Remember this code WILL NOT RUN here without the Card class definition here and the method defined properly.
 
 
 ## Put your answer to the question here:
 
+## My answer to this question was:
+# def compare_rank(self, rank_imp):
+#     if self.rank > rank_imp:
+#         return False
+#     else:
+#         return True
+
 
 ## Put your comment explanations/reflections here:
+
+## I got marked down due to a logic error and I definitely see why I got it wrong.
+## Because within the if statement, I had it return False while I should have had it return true. I also should have 
+## used self.rank_num so that the method can compare integers and not strings for the face cards.
 
 
 print("\n*******\n")
@@ -130,7 +145,9 @@ print ('Midterm Question #9')
 
 ## (Midterm 9). Given the following code, there is 1 possible value of var such that every print statement will print out. What is the only possible type that value could be? (In your reflection/explanation, explain briefly why.)
 
-var = " ???? replace this "
+var = 'mpyx'
+
+print (var[1:3])
 if var[1:3] == "py":
     print("Yup!")
 if var[-1] == 'x':
@@ -142,8 +159,15 @@ if 'm' in var:
 
 ## Put your answer to the question here:
 
+## I put that there was a possibility that the type of var could also be a string OR a list.
+
 
 ## Put your reflections/explanations here:
+
+## The reason why 'var' can only be a string and not a list is because of the first if statement.
+## If one was to print var[1:3] if var was a list, a list would be returned and it would not be the string "py"
+## causing that to fail. However, with var as a string, splitting that string would return the string "py", meeting
+## the requirements for everything to print. So, the type of var is only a STRING.
 
 
 print("\n*******\n")
@@ -157,29 +181,80 @@ print(stuff['purple'][3] + stuff["blue"][0])
 
 ## Put your answer to the question here:
 
+## I said that an error would occur becuase strings are immutable.
+
 
 ## Put your comment explanations/reflections here:
 
+## It was clear that the answer to this was "SIC". I was thinking that strings are immutable and you cannot add to a string.
+## However, becuase both 'SI' and 'C' are from their own entities, we can add them together. The idea that strings
+## are immutable is that if I had x = 'hello', I cannot just add on to variable x, I would have to create a new variable
+## y = x + "lol" if I wanted to add "lol" to the string 'hello'. But saying print(stuff['purple'][3] + stuff["blue"][0]) 
+## is acceptable. I also thought stuff['blue'][0] was "Cornflower" but since stuff['blue'] only has one value, the [0]
+## would refer to the first letter which is 'C'.
 
 
 print("\n*******\n")
-print ('Midterm Question #15 number 2')
+print ('Midterm Question #15')
+
+print ('some code here')
 
 
-## (Midterm 15, 15 number 2). (Also refer to the code and instructions on pages 7 and 8 of the midterm PDF.) Write 2 more tests for class Student to check that it does precisely what the description on page 7 says it ought to do. You should create a new test class in which to do put these tests. 
+## (Midterm 15). (Also refer to the code and instructions on pages 7 and 8 of the midterm PDF.) Write 2 more tests for class Student to check that it does precisely what the description on page 7 says it ought to do. You should create a new test class in which to do put these tests. 
 
 ## Note that if you write them here, either they will not run without invoking unittest.main() -- which is OK, you need not do so -- OR they will all fail because the class Student is not defined. Still, we are looking for accurate, syntactically correct tests that will test the methods of class Student as specified in the question.
 
 ## Put your answer to the question here:
 
+## That is what I put:
+# import unittest
 
+# class test_Student_class(unittest.TestCase):
+#     def test_string_method(self):
+#         s = Student("David")
+#         self.assertEqual(print(s.__str__())), "David has written 0 papers."
+
+#     def test_write_paper(self):
+#         s2 = Student("Danielle")
+#         s2.write_paper()
+#         self.assertEqual(s2.number_papers,1)
+
+#     def test_name_type(self):
+#         s3 = Student("Ankita")
+#         self.assertEqual(type(s3.name),type(str))
+
+# unittest.main(verbosity=2)
+
+## **These are my corrections**
+
+import unittest
+
+class test_Student_class(unittest.TestCase):
 
 ## Put your reflections/explanations here. (Remember, brief.)
 
 
 
 print("\n*******\n")
-print ('END')
+print ('Midterm Question #15 Number 2')
+print ('Check Out My Comments')
+
+## Put your answer to the question here:
+
+## The answer that I put was B,D,E where the correct answer was just D and E.
+
+
+## Put your reflections/explanations here. (Remember, brief.)
+
+## The reason why B is incorrect is becuase when defining functions, all required parameters must be placed 
+## before any optional parameters. It would be hard if optional parameters came first because the interpreter
+## would not be able to decide which values were to go with what. With D and E, the optional parameters come
+## after the required ones.
+
+
+
+print("\n*******\n")
+print ('THE END')
 
 
 # Obtained Full Points for Midterm Question 18
