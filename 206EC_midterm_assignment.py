@@ -206,7 +206,7 @@ print ('some code here')
 
 ## Put your answer to the question here:
 
-## That is what I put:
+## That is what I put on the:
 # import unittest
 
 # class test_Student_class(unittest.TestCase):
@@ -227,11 +227,30 @@ print ('some code here')
 
 ## **These are my corrections**
 
-import unittest
+# import unittest
 
-class test_Student_class(unittest.TestCase):
+# class test_Student_class(unittest.TestCase):
+#     def test_string_method(self):
+#         s = Student("David")
+#         self.assertEqual(s.__str__(), "David has written 0 papers."
+
+#     def test_write_paper(self):
+#         s2 = Student("Danielle")
+#         s2.write_paper()
+#         self.assertEqual(s2.number_papers,1)
+
+#     def test_name_type(self):
+#         s3 = Student("Ankita")
+#         self.assertEqual(type(s3.name),type(str))
+
+# unittest.main(verbosity=2)
+
 
 ## Put your reflections/explanations here. (Remember, brief.)
+
+## The error with this question is that I did not need that print statement in my test_string_method test.
+## Becuase of the assertEqual, it will check whether the value of s.__str__() is equal to that. If I were to
+## print it, it would cause major errors.
 
 
 
