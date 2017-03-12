@@ -28,6 +28,8 @@
 ############ END INSTRUCTIONS ############
 print("\n*******\n")
 
+print ('Midterm Question #3')
+
 ## (Midterm 3). What is the output after the following code runs?
 
 def func(x):
@@ -51,6 +53,7 @@ print(func([1,2]))
 
 
 print("\n*******\n")
+print ('Midterm Question #6')
 
 ## (Midterm 6) Which of the following statements (in comments) are valid to create an instance of class Card and save it to the variable x, with no errors? (Reference cards.py / the code on the exam)
 
@@ -75,16 +78,42 @@ print("\n*******\n")
 
 
 print("\n*******\n")
+print ('Midterm Question #7')
 
 ## (Midterm 7). Write an additional method for the Card class called compare_rank. You can assume the method is correctly placed inside the class, but you can write it by copying the Card class definition into this file, OR you can write it and test it in the cards.py file and copy it into this file commented out. (Otherwise, it won't run!)
 
 ## This method should return a boolean value True if the input rank number is larger than the Card's rank, and False if it is smaller or equal to the Card's rank.
 
+class Card(object):
+	suit_names =  ["Diamonds","Clubs","Hearts","Spades"]
+	rank_levels = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+	faces = {1:"Ace",11:"Jack",12:"Queen",13:"King"}
+
+	def __init__(self, suit=0,rank=2):
+		self.suit = self.suit_names[suit]
+		if rank in self.faces: # self.rank handles printed representation
+			self.rank = self.faces[rank]
+		else:
+			self.rank = rank
+		self.rank_num = rank # To handle winning comparison 
+
+	def __str__(self):
+		return "{} of {}".format(self.rank,self.suit)
+
+	def compare_rank(self, rank_imp):
+		if self.rank > rank_imp:
+			return False
+
+		else:
+			return True
+
+
 ## For example, the following code should work correctly when placed inside the Card class definition, if the compare_rank method is defined correctly:
 
-# c = Card(2,11)
-# print(c.compare_rank(4)) # should print False
-# print(c.compare_rank(13)) # should print True
+c = Card(2,11)
+print(c.compare_rank(4)) # should print False
+print(c.compare_rank(13)) # should print True
+print (c.compare_rank(11)) # should print False
 
 ## Remember this code WILL NOT RUN here without the Card class definition here and the method defined properly.
 
@@ -96,6 +125,8 @@ print("\n*******\n")
 
 
 print("\n*******\n")
+print ('Midterm Question #9')
+
 
 ## (Midterm 9). Given the following code, there is 1 possible value of var such that every print statement will print out. What is the only possible type that value could be? (In your reflection/explanation, explain briefly why.)
 
@@ -116,6 +147,7 @@ if 'm' in var:
 
 
 print("\n*******\n")
+print ('Midterm Question #10')
 
 ## (Midterm 10). What will print when the following code runs? If there will be an error, say so.
 
@@ -131,6 +163,8 @@ print(stuff['purple'][3] + stuff["blue"][0])
 
 
 print("\n*******\n")
+print ('Midterm Question #15 number 2')
+
 
 ## (Midterm 15, 15 number 2). (Also refer to the code and instructions on pages 7 and 8 of the midterm PDF.) Write 2 more tests for class Student to check that it does precisely what the description on page 7 says it ought to do. You should create a new test class in which to do put these tests. 
 
@@ -145,6 +179,8 @@ print("\n*******\n")
 
 
 print("\n*******\n")
+print ('END')
+
 
 # Obtained Full Points for Midterm Question 18
 # ## (Midterm 18). Given the following code, you want to sort the list saved in lst1 to end up in the following order: ["happy","absence","something","synergy"]. Which of the 3 following named functiosn should be the KEY PARAMETER of the sorted function (replacing the question marks in the commented line below)?
