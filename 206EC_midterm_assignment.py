@@ -47,11 +47,8 @@ print(func([1,2]))
 
 ## Put your comment explanations/reflections here:
 
-## After looking at this problem again, I realized that x is equal to the list [1,2] and since that list is being
-## passed through the function, it would return that same list again. During the exam, I was thinking becuase there 
-## is a return statement, the for loop would exit and only the first element of the list will be printed, instead of both.
-
-## LOOK AT THIS AGAIN???
+## After looking at this problem again, I realized I did not realize the function was returning x. X is the input which is 
+## the list [1,2]
 
 
 print("\n*******\n")
@@ -197,7 +194,7 @@ print(stuff['purple'][3] + stuff["blue"][0])
 print("\n*******\n")
 print ('Midterm Question #15')
 
-print ('some code here')
+print ('Check out my Comments!')
 
 
 ## (Midterm 15). (Also refer to the code and instructions on pages 7 and 8 of the midterm PDF.) Write 2 more tests for class Student to check that it does precisely what the description on page 7 says it ought to do. You should create a new test class in which to do put these tests. 
@@ -206,7 +203,7 @@ print ('some code here')
 
 ## Put your answer to the question here:
 
-## That is what I put on the:
+## That is what I put on the exam:
 # import unittest
 
 # class test_Student_class(unittest.TestCase):
@@ -250,7 +247,7 @@ print ('some code here')
 
 ## The error with this question is that I did not need that print statement in my test_string_method test.
 ## Becuase of the assertEqual, it will check whether the value of s.__str__() is equal to that. If I were to
-## print it, it would cause major errors.
+## print it, the assertEqual
 
 
 
